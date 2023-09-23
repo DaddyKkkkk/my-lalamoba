@@ -4,9 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="https://kit.fontawesome.com/7cad7aecac.js" crossorigin="anonymous"></script>
 </head>
+<style>
+    .class-about-col-1 img{
+        border-radius: 15% 35% 50% 75%;
+        padding: 5px;
+        background: linear-gradient(45deg, red, blue);
+    }
+    .tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+#background{
+    padding: 30px 0;
+}
+.background-check{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin: 50px;
+}
+.background div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+}
+.background div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+</style>
 <body>
-    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Logo2.png" class="Logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p> Newbie Developer/ Web Designer</p>
+                <h1>Hi, I'm <span>Nel Chrimson</span> <br> from The Philippines!</h1>
+            </div>
+        </div>
+    </div>
+    <!-----------About------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="class-about-col-1">
+                    <img src="nobg.jpg" width="450px ">
+                </div>
+                <div class="class-about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Hi I am Nel and I would like to take on the challenge on becoming a good developer in the upcoming future.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'personal information')">Personal information</p>
+                        <p class="tab-links" onclick="opentab(event, 'hobbies')">Hobbies</p>
+                        <p class="tab-links" onclick="opentab(event, 'educational attainment')">Educational Attainment</p>
+                    </div>
+                   
+                    <div class="tab-contents active-tab" id="personal information">
+                        <ul>
+                            <li><span>Born on 10th of January 2002</span><br>First Born</li>
+                            <li><span>Iglesia Ni Cristo</span><br>New Era Compound Sampaloc v</li>
+                            <li><span>Weighing 52 kilograms</span><br>Height of 165cm (5'5)</li>
+                            <li><span>Male</span><br>Aged 21</li>
+
+                        </ul>
+                    </div> 
+                    <div class="tab-contents" id="hobbies">
+                        <ul>
+                            <li><span>Painting</span><br>Sketching</li>
+                            <li><span>Sports</span><br>Volleyball</li>
+                            <li><span>Board Ganes</span><br>Scrabble and Chess</li>
+                            <li><span>Singing</span><br>Choral and Melodic</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="educational attainment">
+                        <ul>
+                            <li><span>Elementary</span><br>Graduate</li>
+                            <li><span>Junior High School</span><br>Completer</li>
+                            <li><span>Senior High School</span><br>Graduate</li>
+                            <li><span>College</span><br>Took Bachelor of Secondary Education Major In English<br> Undergraduate<br> Currently taking Bachelor of Science in Information System</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------background------->
+<div id="background">
+    <div class="container">
+        <h1 class="sub-title">My Background</h1><br><hr><br><br>
+        <div class="background-check">
+            <div>
+                <i class="fa-solid fa-kitchen-set"></i>
+                <h2>Kitchen Staff</h2>
+                <p>In 2018, I worked as a Kitchen Staff in a Korean Restaurant.</p>
+                <a href="https://www.facebook.com/Bulgeungogii">Learn more...</a>
+
+            </div>
+            <div>
+                <i class="fa-solid fa-universal-access"></i>
+                <h2>Salesman</h2>
+                <p>In mid 2018, I worked as a Salesman in a Shopping Center called Skyking (now Savemore) located at JP Rizal St.Silang Cavite.</p>
+                <a href="https://www.facebook.com/profile.php?id=100064081567282">Learn more...</a>
+                
+            </div>
+            <div>
+                <i class="fa-solid fa-bell-concierge"></i>
+                <h2>Cook/Server</h2>
+                <p>In 2019, before the Pandemic hit, I worked as a Cook/Server in Munoz called K2 Sizzling BBQ.</p>
+                <a href="https://www.facebook.com/pages/K2-Bbq-Sizzling/383898769060855">Learn more...</a>
+                
+            </div>
+            <div>
+                <i class="fa-solid fa-bread-slice"></i>
+                <h2>Assistant Baker</h2>
+                <p>2022-March 2023, I worked as an Assistnat Baker at The Courtyard Deli and Cafe by BGMC located in Salitran-Salawag Road Near The Orchard, Caite.</p>
+                <a href="https://www.facebook.com/profile.php?id=100076371194984">Learn more...</a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------contacts------->
+<div id="contacts">
+    <div class="container">
+        <h1 class="sub-title"><j>Contacts</h1><br><br></j>
+        <div class="contact-list">
+            <div class="contact">
+        <div class="facebook">
+            <a href="https://www.facebook.com/nelchrimson.garin">
+            <img src="fb blk.jpg" width="100" height="100" style="border-radius: 17px;"><br><br>
+            <div class="layer"> </a>
+              </div>
+        </div> 
+        <div class="viber">
+            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fvb.me%2FletsChatOnViber%3Ffbclid%3DIwAR1u2_wYV3EpSfDG6_AcOL_W7rA7f_DcujghFzWSunmcYzvjKwcOmMKY5zc&h=AT1qBgIXjHkwlrSOs2zp5QklOTSwX0mM_-1hTm45luTtimD_9zQED2sl86bhbaGTnBfGzaXExwT8VUE7GBqNs9g_uiflNJhXPk1Yq3jPcDiSCv6tyumt25KFs7uhLuINMiouDw">
+            <img src="vber.png" width="100" height="100" style="border-radius:17px;">
+            <div class="layer"></a>
+              </div>
+        </div>
+    </div>
+
+</div>
+   <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(event, tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+   </script> 
 </body>
 </html>
